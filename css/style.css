@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("../fonts/roboto-mono-medium.ttf");
+}
+
+@font-face {
+    font-family: "typodraft";
+    src: url("../fonts/handwriting-draft_free-version.ttf");
+}
+
+
+:root {
+    --font: "Roboto Mono";
+    --titlefont: "typodraft";
+    --background: #2c1712;
+    --foreground: #d8cac0;
+    --alt-foreground: #938879;
+    --yellow: #ffd834;
+    --blue: #81a1c1;
+    --red: #b3393b;
+    --brown: #4a261e;
+    --branch: 1px solid #3b4252;
+}
+
+* {
+    color: var(--foreground);
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 11px;
+}
+
+body {
+    background: var(--background);
+}
+
+a {
+    text-decoration: none;
+    padding-left : 4px;
+    padding-right: 4px;
+}
+
+strong {
+    color: var(--yellow);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+em {
+    color: var(--alt-foreground);
+}
+
+.center {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 95vh;
+}
+
+.card {
+    height: auto;
+    display: flex;
+    width: 98vw; justify-content: center ;
+    flex-direction: row;
+    margin: auto;
+}
+
+.centerpanel {
+    display: flex;
+    background: var(--brown);
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    width: 260px;
+    border: solid 4px var(--foreground);
+    border-radius: 4px;
+    align-items: center;
+    z-index: 1000;
+}
+
+.leftpanel, .rightpanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box {
+ 
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    background: var(--brown);
+    border: solid 2px var(--foreground);
+    
+}
+
+.header {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+}
+
+.pseudo {
+    color: var(--yellow);
+    font-family: var(--titlefont);
+    font-size: 16px;
+    font-weight: bold;
+    margin: auto 6px;
+
+    flex: 1;
+}
+
+.role {
+    align-items: center;
+    margin-top: 5px;
+    padding: 3px;
+    display: flex;
+}
+.role .roletext {
+    line-height: 1.1em;
+    text-align: right;
+    padding-right: 4px;
+    flex: 2;
+}
+span {
+    
+    text-decoration: underline;
+}
+
+.text {
+    padding: 5px;
+}
+
+img.icon {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+.header img.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.panel {
+    flex-grow : 1;
+    min-width: 0;
+    padding : 0.3em;
+    height: 20px;
+}
+
+.leftpanel .box {
+    margin-left: auto;
+    border-right: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    transition-duration: 0.5s;
+    transform: translateX(100%) translateX(-22px);
+}
+
+.rightpanel .box {
+    margin-right: auto;
+    flex-direction: row-reverse;
+    border-left: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transition-duration: 0.5s;
+    transform: translateX(-100%) translateX(22px);
+}
+
+.leftpanel .box:hover {
+    transform: translateX(0);
+}
+
+.rightpanel .box:hover {
+    transform: translateX(0);
+}
