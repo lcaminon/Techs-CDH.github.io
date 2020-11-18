@@ -76,7 +76,7 @@ em {
     flex-direction: column;
     width: 60%;
     height: auto;
-    width: 260px;
+    width: 408px;
     border: solid 4px var(--foreground);
     border-radius: 4px;
     align-items: center;
@@ -154,6 +154,10 @@ img.icon {
     min-width: 0;
     padding : 0.3em;
     height: 20px;
+}
+
+.expes {
+    text-align: left;
 }
 
 .leftpanel .box {
